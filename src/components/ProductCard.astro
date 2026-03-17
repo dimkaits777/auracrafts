@@ -1,0 +1,46 @@
+---
+import type { Product } from '../types/index';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<article class="group flex flex-col rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
+  <a
+    href={product.affiliateUrl}
+    rel="sponsored nofollow"
+    target="_blank"
+    class="block aspect-[4/3] overflow-hidden bg-gray-50"
+    aria-label={`View ${product.name} on Creative Fabrica`}
+    tabindex="0"
+  >
+    <img
+      src={product.imageUrl}
+      alt={product.name}
+      loading="lazy"
+      decoding="async"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+      width="400"
+      height="300"
+    />
+  </a>
+  <div class="flex flex-col flex-1 p-4 gap-3">
+    <h3 class="font-semibold text-gray-900 text-sm leading-snug line-clamp-2">
+      {product.name}
+    </h3>
+    <p class="text-xs text-gray-500 line-clamp-3 flex-1 leading-relaxed">
+      {product.description}
+    </p>
+    <a
+      href={product.affiliateUrl}
+      rel="sponsored nofollow"
+      target="_blank"
+      class="mt-auto block bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white text-xs font-semibold py-2.5 px-4 rounded-lg transition-colors text-center min-h-[44px] flex items-center justify-center"
+    >
+      Click here and download
+    </a>
+  </div>
+</article>
