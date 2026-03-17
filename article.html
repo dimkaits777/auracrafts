@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Article — Auracrafts</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.art-hero{padding:130px 0 52px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+.art-grid{display:grid;grid-template-columns:1fr 300px;gap:52px;padding:60px 0 96px;align-items:start}
+@media(max-width:1024px){.art-grid{grid-template-columns:1fr}}
+.art-sidebar-col{position:sticky;top:90px}
+@media(max-width:1024px){.art-sidebar-col{display:none}}
+.art-body h2{font-family:var(--ff-d);font-size:1.65rem;font-weight:500;color:var(--dark);margin:32px 0 12px;line-height:1.2}
+.art-body h3{font-family:var(--ff-d);font-size:1.2rem;font-weight:500;margin:24px 0 10px}
+.art-body p{color:var(--muted);line-height:1.8;margin-bottom:16px;font-size:.94rem}
+.art-body ul,.art-body ol{margin:0 0 16px 22px;color:var(--muted);line-height:1.8;font-size:.94rem}
+.art-body li{margin-bottom:5px}
+.art-body img{width:100%;border-radius:var(--r-m);margin:22px 0;box-shadow:var(--sh-m)}
+.art-tip{background:var(--cream2);border-left:3px solid var(--copper);border-radius:0 var(--r-s) var(--r-s) 0;padding:16px 20px;margin:20px 0;font-size:.9rem;color:var(--text)}
+.art-tip strong{color:var(--copper2);display:block;margin-bottom:3px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-top:16px}
+.side-w{background:#fff;border-radius:var(--r-m);border:1px solid var(--border);padding:20px;margin-bottom:20px}
+.side-w h4{font-family:var(--ff-d);font-size:.98rem;font-weight:500;color:var(--dark);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.side-prod{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.side-prod:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.side-prod img{width:52px;height:52px;object-fit:cover;border-radius:var(--r-s);flex-shrink:0;border:1px solid var(--border)}
+.side-prod-t{font-size:.78rem;font-weight:500;color:var(--dark);line-height:1.3;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.side-prod-cta{font-size:.68rem;font-weight:700;color:var(--wine);text-transform:uppercase;letter-spacing:.04em}
+.art-tag{display:inline-block;background:var(--cream2);color:var(--copper2);border-radius:50px;padding:3px 11px;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.pin-btn{display:inline-flex;align-items:center;gap:7px;background:#E60023;color:#fff;border-radius:50px;padding:9px 18px;font-size:.8rem;font-weight:600;transition:background .2s;margin-bottom:4px}
+.pin-btn:hover{background:#c2001c}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-inner">
+    <a href="index.html" class="logo"><div class="logo-txt">Aura<b>crafts</b></div><div class="logo-sub">Mother's Day Collection</div></a>
+    <nav class="mainnav">
+      <div class="nav-drop"><a href="shop-embroidery.html" class="nav-a">Shop ▾</a><div class="nav-drop-menu"><a href="shop-embroidery.html">🪡 Embroidery</a><a href="shop-laser.html">🔆 Laser Cutting</a><a href="shop-graphics.html">🎨 Graphics</a></div></div>
+      <a href="ideas.html" class="nav-a">Gift Ideas</a>
+      <a href="articles.html" class="nav-a cur">Tips & Blog</a>
+      <a href="equipment.html" class="nav-a">Equipment</a>
+      <a href="about.html" class="nav-a">About</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="hdr-ico wish-open"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="hdr-badge">0</span></button>
+      <a href="shop-embroidery.html" class="hdr-shop-btn btn">Browse Designs</a>
+      <button class="burger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mob-nav">
+  <a href="shop-embroidery.html">🪡 Embroidery</a><a href="shop-laser.html">🔆 Laser</a><a href="shop-graphics.html">🎨 Graphics</a>
+  <a href="ideas.html">Gift Ideas</a><a href="articles.html">Tips & Blog</a><a href="equipment.html">Equipment</a><a href="about.html">About</a>
+</nav>
+<div class="overlay"></div>
+<aside class="drawer"><div class="drawer-hd"><h3>Saved ❤️</h3><button class="drawer-x">✕</button></div><div class="drawer-bd"></div><div class="drawer-ft"><a href="shop-embroidery.html" class="btn btn-d" style="display:flex;justify-content:center">Browse Designs →</a></div></aside>
+
+<section class="art-hero" id="artHero">
+  <div id="artHeroOverlay" style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(253,246,238,.96) 45%,rgba(253,246,238,.6) 68%,transparent 100%)"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="bc" id="artBc"><a href="index.html">Home</a><span class="bc-sep">›</span><a href="articles.html">Blog</a><span class="bc-sep">›</span><span id="artBcTitle">Article</span></div>
+    <span class="art-tag" id="artTag">Guide</span>
+    <h1 class="dsp-md" id="artH1" style="margin-top:10px;margin-bottom:14px;max-width:720px">Loading…</h1>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.78rem;color:var(--muted)">
+      <span id="artAuthor">✏️ Emma Stitch</span>
+      <span id="artDate">📅 March 2025</span>
+      <span id="artRead">⏱ 6 min read</span>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="art-grid">
+    <article class="art-body" id="artContent">
+      <p><em>Loading article…</em></p>
+    </article>
+    <aside class="art-sidebar-col">
+      <div class="side-w">
+        <h4>Featured Designs</h4>
+        <div id="sideProds"></div>
+        <a href="shop-embroidery.html" class="btn btn-wn btn-sm" style="display:block;text-align:center;margin-top:8px">Browse All Designs →</a>
+      </div>
+      <div class="side-w">
+        <h4>Share This Article</h4>
+        <button class="pin-btn" onclick="pinShare()">📌 Save to Pinterest</button>
+        <button onclick="navigator.clipboard.writeText(location.href);toast('🔗 Link copied!')" class="btn btn-o btn-sm" style="display:block;margin-top:8px;width:100%;justify-content:center">🔗 Copy Link</button>
+      </div>
+      <div class="side-w" style="background:linear-gradient(135deg,var(--wine),#6B3347);border:none">
+        <p style="color:#fff;font-size:.82rem;line-height:1.55;margin-bottom:12px">All designs are instant download with commercial license via Creative Fabrica.</p>
+        <a href="https://www.creativefabrica.com/search/ref/20531415/?query=mother&type=Embroidery" target="_blank" rel="noopener sponsored" class="btn btn-w btn-sm" style="display:flex;justify-content:center">Shop All Designs →</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Related articles -->
+<section style="background:var(--cream2);padding:56px 0">
+  <div class="wrap">
+    <h3 class="dsp-sm" style="margin-bottom:28px">More Articles</h3>
+    <div class="agrid" id="relatedArts"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand"><div class="logo"><div class="logo-txt">Aura<b>crafts</b></div><div class="logo-sub">Mother's Day</div></div><p>Curated digital craft designs for beautiful handmade gifts.</p></div>
+      <div class="foot-col"><h5>Shop</h5><a href="shop-embroidery.html">Embroidery</a><a href="shop-laser.html">Laser Cutting</a><a href="shop-graphics.html">Graphics</a></div>
+      <div class="foot-col"><h5>Explore</h5><a href="ideas.html">Gift Ideas</a><a href="articles.html">Blog</a><a href="equipment.html">Equipment</a></div>
+      <div class="foot-col"><h5>Info</h5><a href="about.html">About</a><a href="about.html#disclosure">Disclosure</a></div>
+    </div>
+    <hr class="foot-hr">
+    <div class="foot-bot"><span>© 2025 Auracrafts.</span></div>
+  </div>
+</footer>
+<div class="toast"></div>
+
+<script src="data-embroidery.js"></script>
+<script src="shared.js"></script>
+<script>
+const ARTICLES = {
+  1: {
+    tag:'🪡 Embroidery Tips', title:'10 Tips for Perfect Machine Embroidery on Towels',
+    author:'Emma Stitch', date:'March 2025', read:'6 min read',
+    bg:'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1400&h=600&fit=crop',
+    shopLink:'shop-embroidery.html?cat=floral',
+    content:`
+      <p>Embroidering on terry cloth towels is one of the most popular and practical projects for Mother's Day — but it can also be one of the trickiest. The looped pile of towel fabric can easily swallow up fine details and cause distortion. Follow these 10 pro tips and you'll achieve crisp, beautiful results every time.</p>
+      <img src="https://images.unsplash.com/photo-1563291074-2bf8677ac0e5?w=800&h=450&fit=crop" alt="Embroidered towels" loading="lazy">
+      <h2>1. Always Use a Water-Soluble Topper</h2>
+      <p>This is the single most important tip. A water-soluble stabilizer placed on top of the towel prevents the embroidery needle from sinking into the loops. Simply hoop it together with your stabilizer and tear or wash it away once stitching is complete.</p>
+      <div class="art-tip"><strong>💡 Pro Tip</strong>The best toppers for towels are firms ones like Sulky Solvy or Badgemaster. Avoid flimsy toppers — they tear during embroidery.</div>
+      <h2>2. Choose a Cut-Away Backing Stabilizer</h2>
+      <p>Terry cloth is stretchy and unstable. A medium-weight cut-away stabilizer provides permanent support that prevents your design from distorting after washing. Tear-away is not recommended for this application.</p>
+      <h2>3. Use a 75/11 or 80/12 Embroidery Needle</h2>
+      <p>A ballpoint or stretch needle (rather than a sharp universal needle) glides between the loops instead of piercing them. This dramatically reduces thread breaks and fabric damage.</p>
+      <h2>4. Hoop the Stabilizer, Float the Towel</h2>
+      <p>Instead of hooping the towel directly (which can leave hoop marks and distort the pile), hoop your cut-away stabilizer tightly and then adhere the towel on top using a temporary spray adhesive. This "floating" technique gives you perfect placement without damaging the towel border.</p>
+      <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=800&h=400&fit=crop" alt="Stabilizer setup" loading="lazy">
+      <h2>5. Increase Your Design Density (But Not Too Much)</h2>
+      <p>Increase the fill density of your design by 10-15% compared to what you'd use on a flat fabric. The loops absorb some of the thread coverage. However, going too dense will cause the fabric to pucker and the stitches to pile up uncomfortably thick.</p>
+      <h2>6. Use a Compensation Factor for Fine Details</h2>
+      <p>The pile of the towel will slightly obscure fine details and tight lettering. Choose designs with bolder lines and avoid fonts smaller than 5mm for best legibility. Our floral designs and bold quote designs are perfect for towels.</p>
+      <div class="art-tip"><strong>✅ Best Design Types for Towels</strong>Large florals, bold quotes, solid fills, simple silhouettes. Avoid fine-line designs and small text under 5mm.</div>
+      <h2>7. Lower Your Embroidery Speed</h2>
+      <p>Slow your machine down to 60-70% of its maximum speed. This prevents the needle from pulling on the loops and reduces thread breaks. The extra time is worth the dramatically improved quality.</p>
+      <h2>8. Pre-wash Your Towels</h2>
+      <p>Always wash new towels before embroidering. New towels can shrink 3-5% after first washing, which would distort your design. Pre-washing also removes the factory softeners that can cause adhesive to not stick properly.</p>
+      <h2>9. Press Carefully After Embroidery</h2>
+      <p>Never iron directly on top of the embroidery — the heat will flatten the satin stitches. Instead, place the towel face-down on a thick towel and press from the back. This protects the embroidery while removing any hoop marks from the remaining pile.</p>
+      <h2>10. Choose the Right Thread Color</h2>
+      <p>High-contrast thread colors (dark on light towels, light on dark) create the most dramatic results. Matching the thread too closely to the towel color, while elegant, can lose impact in the pile. Rayon thread gives a beautiful sheen; polyester offers better wash durability.</p>
+      <div class="art-tip"><strong>🎁 Ready to Start?</strong>Browse our collection of 1,682 Mother's Day embroidery designs — all perfectly suited for towels, totes, pillows and more. Instant download with commercial license.</div>
+      <p style="text-align:center;margin-top:28px"><a href="shop-embroidery.html?cat=floral" class="btn btn-p">Browse Embroidery Designs →</a></p>
+    `
+  },
+  2: {
+    tag:'📖 Guide', title:'How to Choose the Right Stabilizer for Any Fabric',
+    author:'Emma Stitch', date:'February 2025', read:'8 min read',
+    bg:'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=1400&h=600&fit=crop',
+    shopLink:'shop-embroidery.html',
+    content:`
+      <p>Walk into any craft store and you'll find an overwhelming wall of stabilizers. Cut-away, tear-away, wash-away, heat-away, self-adhesive, floating, topping… which do you choose? This guide will make sense of it all.</p>
+      <h2>The Golden Rule: Match Stability to Fabric Stability</h2>
+      <p>The most important principle in stabilizer selection is this: unstable fabrics need permanent stabilizers (cut-away), stable woven fabrics can use temporary stabilizers (tear-away), and problem fabrics like velvet or toweling need toppers.</p>
+      <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=400&fit=crop" alt="Stabilizer types" loading="lazy">
+      <h2>Cut-Away Stabilizer</h2>
+      <p>This is the most common and most permanent option. After embroidering, you cut the excess away leaving a permanent backing that keeps the design stable through many washes.</p>
+      <ul>
+        <li><strong>Best for:</strong> Stretchy fabrics (jersey, fleece, knits), towels, baby onesies</li>
+        <li><strong>Weight choices:</strong> Light (for light knits), Medium (most common), Heavy (very stretchy)</li>
+        <li><strong>Drawback:</strong> Visible on reverse side of garment</li>
+      </ul>
+      <div class="art-tip"><strong>💡 When to double up</strong>For very stretchy fabrics, use two layers of medium cut-away, with the grain running in different directions. This provides stability from multiple angles.</div>
+      <h2>Tear-Away Stabilizer</h2>
+      <p>A paper-like stabilizer that you tear away after embroidering. Convenient but provides less permanent support.</p>
+      <ul>
+        <li><strong>Best for:</strong> Stable woven fabrics — cotton, linen, denim, canvas tote bags</li>
+        <li><strong>Not recommended for:</strong> Stretchy fabrics, towels, anything that needs to hold its shape after washing</li>
+        <li><strong>Advantage:</strong> Clean reverse side, easy to use</li>
+      </ul>
+      <h2>Wash-Away (Water-Soluble) Stabilizer</h2>
+      <p>Dissolves completely in water — invaluable for certain applications where you don't want any visible stabilizer remaining.</p>
+      <ul>
+        <li><strong>As backing:</strong> Free-standing lace, lace doilies, specialty items</li>
+        <li><strong>As topping (most common use):</strong> Place on TOP of terry cloth, velvet, or any textured fabric to keep stitches from sinking into the pile</li>
+      </ul>
+      <h2>Heat-Away Stabilizer</h2>
+      <p>Disappears when you apply heat (usually a dry iron). Useful for items that can't get wet, or for backing delicate fabrics where you don't want to tear.</p>
+      <h2>Quick Reference Table</h2>
+      <div style="overflow-x:auto;margin:20px 0">
+        <table style="width:100%;border-collapse:collapse;font-size:.85rem">
+          <thead><tr style="background:var(--cream2)"><th style="padding:10px;text-align:left;border:1px solid var(--border)">Fabric</th><th style="padding:10px;text-align:left;border:1px solid var(--border)">Stabilizer</th><th style="padding:10px;text-align:left;border:1px solid var(--border)">Topper Needed?</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:9px;border:1px solid var(--border)">Terry cloth towel</td><td style="padding:9px;border:1px solid var(--border)">Cut-away medium</td><td style="padding:9px;border:1px solid var(--border)">Yes — wash-away</td></tr>
+            <tr style="background:var(--cream2)"><td style="padding:9px;border:1px solid var(--border)">Cotton T-shirt</td><td style="padding:9px;border:1px solid var(--border)">Cut-away light</td><td style="padding:9px;border:1px solid var(--border)">No</td></tr>
+            <tr><td style="padding:9px;border:1px solid var(--border)">Canvas tote bag</td><td style="padding:9px;border:1px solid var(--border)">Tear-away medium</td><td style="padding:9px;border:1px solid var(--border)">No</td></tr>
+            <tr style="background:var(--cream2)"><td style="padding:9px;border:1px solid var(--border)">Denim jacket</td><td style="padding:9px;border:1px solid var(--border)">Tear-away heavy</td><td style="padding:9px;border:1px solid var(--border)">No</td></tr>
+            <tr><td style="padding:9px;border:1px solid var(--border)">Velvet</td><td style="padding:9px;border:1px solid var(--border)">Cut-away medium</td><td style="padding:9px;border:1px solid var(--border)">Yes — wash-away</td></tr>
+            <tr style="background:var(--cream2)"><td style="padding:9px;border:1px solid var(--border)">Baby onesie (knit)</td><td style="padding:9px;border:1px solid var(--border)">Cut-away medium ×2</td><td style="padding:9px;border:1px solid var(--border)">No</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:center;margin-top:28px"><a href="equipment.html" class="btn btn-p">Browse Recommended Equipment →</a></p>
+    `
+  },
+  3: {
+    tag:'⭐ Review', title:'Best Threads for Machine Embroidery: My Top 5 Picks',
+    author:'Emma Stitch', date:'January 2025', read:'5 min read',
+    bg:'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1400&h=600&fit=crop',
+    shopLink:'shop-embroidery.html',
+    content:`
+      <p>Thread quality matters enormously in machine embroidery. After years of stitching hundreds of designs, I've tested nearly every brand on the market. Here are the five that I reach for again and again — and why.</p>
+      <h2>1. Madeira Rayon 40 — Best Overall Sheen</h2>
+      <p>Madeira's rayon thread is my go-to for any project where I want that classic silky sheen. The colors are rich and vibrant, and it runs beautifully through virtually every machine. The 40-weight is the most versatile for general embroidery work.</p>
+      <div class="art-tip"><strong>Best for:</strong> Decorative designs, florals, anything where visual impact matters. The rayon sheen catches the light beautifully on finished gifts.</div>
+      <h2>2. Isacord Polyester — Best for Washability</h2>
+      <p>If the embroidered item will be washed frequently — like kitchen towels, children's clothing, or aprons — Isacord polyester is the gold standard. It's colorfast, strong, and the finish holds up beautifully through hundreds of wash cycles.</p>
+      <h2>3. Sulky Rayon 40 — Best Color Range</h2>
+      <p>Sulky offers over 450 colors in their standard rayon range — more than almost any other brand. If you need to match a specific color perfectly, Sulky is where to look. The thread runs smoothly and the colors are consistent between spools.</p>
+      <h2>4. Superior Threads King Tut — Best for Quilting & Fill Areas</h2>
+      <p>For large fill areas and designs that require long-arm or flatbed stitching, King Tut 40-weight cotton thread is exceptional. The matte finish gives a more artisan, handmade quality that works beautifully for certain Mother's Day designs.</p>
+      <h2>5. Brother SA156 Bobbin Thread — Best Budget Bobbin</h2>
+      <p>Don't neglect your bobbin thread. Brother's pre-wound bobbins are perfectly consistent, which means fewer thread breaks and more even tension. Using quality bobbins made a significant difference in my stitch quality.</p>
+      <h2>What to Avoid</h2>
+      <p>Cheap no-name threads from online marketplaces may seem like a bargain, but they're often uneven in weight, have unpredictable twist, and can damage your machine's tension mechanism over time. Stick with established brands — the difference is immediately visible.</p>
+      <p style="text-align:center;margin-top:28px"><a href="shop-embroidery.html" class="btn btn-p">Shop Embroidery Designs →</a></p>
+    `
+  },
+  4: {
+    tag:'🔆 Laser', title:"Beginner's Guide to Laser Cutting Mother's Day Gifts",
+    author:'Craft Studio', date:'December 2024', read:'9 min read',
+    bg:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1400&h=600&fit=crop',
+    shopLink:'shop-laser.html',
+    content:`
+      <p>Laser cutting and engraving opens up a world of stunning, personalised gifts that feel truly premium. A custom-engraved wooden plaque or a laser-cut ornament with her name is the kind of gift that gets displayed and treasured for decades. Here's everything you need to know to get started.</p>
+      <h2>Which Machines Work with Our Files?</h2>
+      <p>Our SVG and DXF laser files are compatible with virtually all desktop laser cutters and engravers, including:</p>
+      <ul>
+        <li><strong>Glowforge</strong> (all models) — uses SVG files, very beginner-friendly</li>
+        <li><strong>xTool D1 / D1 Pro / P2</strong> — uses SVG or DXF, excellent for beginners</li>
+        <li><strong>Sculpfun S10 / S30</strong> — affordable, great for getting started</li>
+        <li><strong>Lightburn-compatible machines</strong> — import SVG or DXF directly</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=450&fit=crop" alt="Laser cutting workshop" loading="lazy">
+      <h2>Understanding the File Formats</h2>
+      <p>Our laser files come in SVG and DXF format:</p>
+      <ul>
+        <li><strong>SVG</strong> — vector format, perfect for Glowforge and most browser-based laser software. Lines are defined as cut paths or engraving areas.</li>
+        <li><strong>DXF</strong> — widely used in CAD-based laser software like LightBurn. Best for more complex machines.</li>
+      </ul>
+      <div class="art-tip"><strong>💡 Cut vs Engrave</strong>In laser files, colored differently (or on separate layers) are your cut lines (all the way through the material) and your engrave areas (surface burns that create the design detail). Always check which is which before firing your machine.</div>
+      <h2>Best Materials for Mother's Day Gifts</h2>
+      <p>Here are the most popular materials and what they're best for:</p>
+      <ul>
+        <li><strong>Basswood (3mm)</strong> — The most popular choice. Cuts and engraves beautifully with excellent detail. Perfect for plaques, ornaments, and cards.</li>
+        <li><strong>Birch plywood (3-6mm)</strong> — Stronger and slightly more textured. Great for signs and boxes.</li>
+        <li><strong>Acrylic</strong> — For a modern, polished look. Engrave on clear acrylic for a striking frosted glass effect.</li>
+        <li><strong>Leather</strong> — Engraves beautifully with a deep, elegant mark. Perfect for keychains and bookmarks.</li>
+      </ul>
+      <h2>Pro Tips for Perfect Results</h2>
+      <ul>
+        <li>Always run a test cut on scrap material before cutting the real piece</li>
+        <li>Clean your lens before each session for consistent power delivery</li>
+        <li>Use masking tape on the surface to reduce smoke scorch marks</li>
+        <li>Lower speed = deeper, darker engraving; Higher speed = lighter, more delicate</li>
+        <li>Sand lightly after cutting and finish with food-safe mineral oil for cutting boards</li>
+      </ul>
+      <p style="text-align:center;margin-top:28px"><a href="shop-laser.html" class="btn btn-p">Browse Laser Files →</a></p>
+    `
+  },
+  5: {
+    tag:'🎒 Tutorial', title:'How to Make a Personalized Tote Bag in 30 Minutes',
+    author:'Emma Stitch', date:'November 2024', read:'7 min read',
+    bg:'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=1400&h=600&fit=crop',
+    shopLink:'shop-embroidery.html',
+    content:`
+      <p>A personalized canvas tote bag is one of the most practical and beloved gifts you can give. It's eco-friendly, useful every single day, and feels genuinely special when embroidered with a heartfelt design. Here's how to create one in under 30 minutes.</p>
+      <h2>What You'll Need</h2>
+      <ul>
+        <li>Blank natural canvas tote bag (12oz is ideal)</li>
+        <li>Tear-away stabilizer, medium weight</li>
+        <li>Temporary spray adhesive</li>
+        <li>An embroidery design (see our quote or floral collections)</li>
+        <li>Rayon or polyester 40-weight thread in your chosen color</li>
+        <li>Topping film (optional, but helps with the canvas texture)</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=800&h=450&fit=crop" alt="Canvas tote bags" loading="lazy">
+      <h2>Step 1: Prepare Your Design & Machine (5 min)</h2>
+      <p>Transfer your design to your embroidery machine. For a standard tote bag, designs up to 5×7 inches work beautifully centered on the front. If you're adding a name, ensure the font size is at least 12mm tall for clear legibility on canvas.</p>
+      <h2>Step 2: Hoop the Stabilizer (3 min)</h2>
+      <p>Hoop a piece of medium-weight tear-away stabilizer on its own first, pulling it very taut. Canvas is stiff but not especially stretchy, so tear-away is perfect here.</p>
+      <h2>Step 3: Float the Tote Bag (5 min)</h2>
+      <p>Spray a light mist of temporary adhesive onto the hooped stabilizer. Lay the front panel of the tote bag carefully onto it, smoothing out any wrinkles. Use positioning marks to ensure the design will be centered. Press firmly to adhere.</p>
+      <div class="art-tip"><strong>💡 Don't Hoop the Bag Itself</strong>Hooping canvas totes directly can leave permanent hoop marks. Always float the bag onto a hooped stabilizer instead.</div>
+      <h2>Step 4: Embroider (15 min)</h2>
+      <p>Stitch at 70% machine speed for canvas. Natural canvas has a slight texture that can cause fine details to blur at full speed. Use a 75/11 sharp needle for clean penetration without snagging the weave.</p>
+      <h2>Step 5: Remove & Finish (2 min)</h2>
+      <p>Unhoop the stabilizer and tear it away carefully from the back of the bag. Hold the stitches firmly with one hand while tearing with the other to prevent distortion. Press the embroidery from the reverse side (embroidery face-down on a thick towel).</p>
+      <p>That's it — 30 minutes to a beautiful, personalized gift! Package in tissue paper and a kraft bag for an instant gift-ready presentation.</p>
+      <p style="text-align:center;margin-top:28px"><a href="shop-embroidery.html?cat=quotes" class="btn btn-p">Browse Quote Designs →</a></p>
+    `
+  },
+  6: {
+    tag:'🌟 Beginner', title:"Complete Beginner's Guide to Machine Embroidery",
+    author:'Emma Stitch', date:'October 2024', read:'12 min read',
+    bg:'https://images.unsplash.com/photo-1543269664-647163ee70d6?w=1400&h=600&fit=crop',
+    shopLink:'shop-embroidery.html',
+    content:`
+      <p>Just bought your first embroidery machine? Congratulations — you're about to discover one of the most rewarding crafts there is. This guide covers everything you need to know to go from unboxed machine to your first finished project.</p>
+      <h2>Understanding Your Machine</h2>
+      <p>Modern embroidery machines come in two main types. Combo machines (sewing + embroidery) are versatile and cost-effective. Dedicated embroidery machines are faster and often have larger embroidery fields. Either type works beautifully with our designs.</p>
+      <h2>Essential Supplies to Get Started</h2>
+      <ul>
+        <li><strong>Stabilizers</strong> — Cut-away (medium weight), Tear-away (medium weight), and Wash-away topper. Start with these three types.</li>
+        <li><strong>Thread</strong> — A starter set of 50 colors in 40-weight rayon or polyester will cover most projects.</li>
+        <li><strong>Needles</strong> — Embroidery needles 75/11 and 80/12. Change every 6-8 hours of stitching.</li>
+        <li><strong>Bobbin thread</strong> — Pre-wound bobbins or thin white bobbin thread (50-60 weight).</li>
+        <li><strong>Hoops</strong> — Your machine comes with several sizes. A 4×4 and 5×7 will cover 90% of projects.</li>
+        <li><strong>Temporary spray adhesive</strong> — Essential for floating technique.</li>
+        <li><strong>Small scissors</strong> — Sharp, pointed embroidery scissors for trimming jump stitches.</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1543269664-647163ee70d6?w=800&h=450&fit=crop" alt="Embroidery machine setup" loading="lazy">
+      <h2>Your First Design: What to Expect</h2>
+      <p>Start with a small, simple design on a stable cotton fabric. A 3×3 inch floral design on a cotton tea towel or cotton tote bag is ideal for your first project. Avoid stretchy fabrics and towels until you've completed 5-10 successful projects on stable fabrics.</p>
+      <div class="art-tip"><strong>🎯 Beginner Design Tips</strong>Choose designs with: large fill areas (not tiny details), maximum 5 colors (fewer thread changes to manage), and a design size that fits your smallest hoop. Our "Modern & Minimal" category is perfect for beginners.</div>
+      <h2>Transferring Designs to Your Machine</h2>
+      <p>Download your chosen design and check which format your machine needs (usually PES for Brother, DST for multi-brand, JEF for Janome). Our designs come in all major formats. Transfer via USB stick or direct computer connection.</p>
+      <h2>The Hooping Process</h2>
+      <p>Hooping is the foundation of every good embroidery result. Proper tension — firm without distorting the fabric — is the goal. Lay your stabilizer (and fabric if hooping directly) on the outer hoop, press the inner hoop in firmly and evenly, then gently tighten the screw.</p>
+      <h2>Common Beginner Mistakes to Avoid</h2>
+      <ul>
+        <li>Starting without testing stabilizer/fabric combination on a scrap piece first</li>
+        <li>Using too little stabilizer — when in doubt, use more</li>
+        <li>Running the machine at full speed for fine designs</li>
+        <li>Not trimming jump stitches before they get caught</li>
+        <li>Choosing designs with very small text (under 4mm) as a first project</li>
+      </ul>
+      <p style="text-align:center;margin-top:28px"><a href="shop-embroidery.html?cat=modern" class="btn btn-p">Browse Beginner-Friendly Designs →</a></p>
+    `
+  },
+  7: {
+    tag:'🎨 Graphics', title:'How to Use Clipart Graphics to Design Beautiful Cards',
+    author:'Craft Studio', date:'September 2024', read:'5 min read',
+    bg:'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1400&h=600&fit=crop',
+    shopLink:'shop-graphics.html',
+    content:`
+      <p>Store-bought cards can cost $8-12 each. With our Mother's Day graphics and a free design tool, you can create cards that look infinitely more personal and professional — for almost nothing. Here's how.</p>
+      <h2>Free Tools You Can Use</h2>
+      <ul>
+        <li><strong>Canva (free tier)</strong> — The easiest option. Drag-and-drop graphics, hundreds of templates, print-ready export.</li>
+        <li><strong>Adobe Express (free)</strong> — More polished templates, easy photo editing, direct integration with Adobe fonts.</li>
+        <li><strong>Photoshop / Illustrator</strong> — Full professional control if you already use Adobe software.</li>
+        <li><strong>Microsoft Word or Publisher</strong> — Underestimated option that works surprisingly well for simple card layouts.</li>
+      </ul>
+      <h2>Using PNG Clipart in Canva</h2>
+      <p>Download the PNG file from our graphics collection (make sure to get the transparent background version). In Canva, create a new project at 5×7 inches (standard card size) at 300 DPI. Upload your PNG file, resize and position it as the focal point of your design. Add your text message, adjust fonts, and download as a PDF for print.</p>
+      <div class="art-tip"><strong>💡 Card Size Guide</strong>Standard folded card: 5×7" (set up as 5×14" then fold). Postcard: 4×6". Square card: 5×5". Always design at 300 DPI for print quality.</div>
+      <h2>Using SVG Files for Layered Designs</h2>
+      <p>SVG files allow you to resize without any quality loss — perfect for large-format prints. In Canva Pro or Illustrator, you can also edit the colors of SVG elements to perfectly match your color scheme.</p>
+      <h2>Printing Tips for Best Results</h2>
+      <ul>
+        <li>Use cardstock paper (80-100lb cover weight) rather than regular printer paper</li>
+        <li>Set your printer to "Best" quality and choose the correct paper type setting</li>
+        <li>A matte finish looks more premium than glossy for most designs</li>
+        <li>For very special occasions, local print shops like Staples or Office Depot offer excellent card printing at low cost</li>
+      </ul>
+      <p style="text-align:center;margin-top:28px"><a href="shop-graphics.html" class="btn btn-p">Browse Clipart Graphics →</a></p>
+    `
+  }
+};
+
+// Sidebar product picks per article
+const SIDE_PRODS = [
+  'https://www.creativefabrica.com/wp-content/uploads/2024/04/04/Every-Kind-of-Mom-Embroidery-94874736-1.png',
+  'https://www.creativefabrica.com/wp-content/uploads/2025/02/04/Mama-Bear-With-Cubs-Embroidery-Design-114983498-1.png',
+  'https://www.creativefabrica.com/wp-content/uploads/2025/04/14/Mother-and-Child-Silhouette-Embroidery-119883228-1.png',
+];
+
+document.addEventListener('DOMContentLoaded',()=>{
+  const p = new URLSearchParams(location.search);
+  const id = parseInt(p.get('id')||'1');
+  const art = ARTICLES[id] || ARTICLES[1];
+
+  // Set hero background
+  document.getElementById('artHero').style.backgroundImage = `url('${art.bg}')`;
+  document.title = art.title + ' — Auracrafts';
+  document.getElementById('artTag').textContent = art.tag;
+  document.getElementById('artH1').textContent = art.title;
+  document.getElementById('artBcTitle').textContent = art.title.substring(0,40)+'…';
+  document.getElementById('artAuthor').textContent = '✏️ ' + art.author;
+  document.getElementById('artDate').textContent = '📅 ' + art.date;
+  document.getElementById('artRead').textContent = '⏱ ' + art.read;
+  document.getElementById('artContent').innerHTML = art.content;
+
+  // Sidebar products from real data
+  const sp = document.getElementById('sideProds');
+  if(sp && typeof window._prods !== 'undefined'){
+    const picks = window._prods.slice(0,3);
+    sp.innerHTML = picks.map(p=>`
+      <div class="side-prod">
+        <img src="${p.i}" alt="${p.t}" loading="lazy" onerror="this.src='https://placehold.co/52x52/EDE0CE/A67850?text=✿'">
+        <div>
+          <div class="side-prod-t">${p.t}</div>
+          <a href="${p.a}" target="_blank" rel="noopener sponsored" class="side-prod-cta">⬇ Download →</a>
+        </div>
+      </div>`).join('');
+  }
+
+  // Related articles
+  const rel = document.getElementById('relatedArts');
+  const imgs = {
+    1:'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&h=340&fit=crop',
+    2:'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&h=340&fit=crop',
+    3:'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=340&fit=crop',
+    4:'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=340&fit=crop',
+    5:'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=340&fit=crop',
+    6:'https://images.unsplash.com/photo-1543269664-647163ee70d6?w=600&h=340&fit=crop',
+    7:'https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&h=340&fit=crop'
+  };
+  const others = Object.keys(ARTICLES).filter(k=>parseInt(k)!==id).slice(0,3);
+  rel.innerHTML = others.map(k=>`
+    <a href="article.html?id=${k}" class="acard">
+      <div class="acard-img"><img src="${imgs[k]}" alt="${ARTICLES[k].title}" loading="lazy"></div>
+      <div class="acard-body">
+        <span class="atag">${ARTICLES[k].tag}</span>
+        <h3>${ARTICLES[k].title}</h3>
+        <div class="ameta"><span>✏️ ${ARTICLES[k].author}</span><span>⏱ ${ARTICLES[k].read}</span></div>
+        <span class="read-more">Read more →</span>
+      </div>
+    </a>`).join('');
+
+  refreshW();
+});
+</script>
+</body>
+</html>
